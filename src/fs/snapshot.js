@@ -3,7 +3,7 @@ import pa from "path";
 
 const snapshot = async () => {
   const rootDir = await fs.realpath(".");
-  let output = {"rooPath": rootDir, "entries": []};
+  let output = {"rootPath": rootDir, "entries": []};
 
   // Write your code here
   // Recursively scan workspace directory
