@@ -78,6 +78,7 @@ const progress = () => {
 
     if (startTime > duration){
       clearInterval(intervalId);
+      process.stdout.write('\nDone!');
     }
   }
 
