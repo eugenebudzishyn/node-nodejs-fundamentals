@@ -1,6 +1,6 @@
-import streams from "node:stream"
+import stream from "node:stream";
 import zlib from "node:zlib"
-import fs from "fs/promises"
+import fs from "node:fs"
 
 const compressDir = async () => {
   // Write your code here
@@ -10,6 +10,12 @@ const compressDir = async () => {
   // Use Streams API
 
   try {
+    function work(){
+
+      stream.pipeline(fs.createReadStream("workspace/parts/toCompress"), zlib.createGzip(), fs.createWriteStream("workspace/parts/compressed"));
+    };
+
+    work()
     
   } catch {
     throw new Error("FS operation failed");
