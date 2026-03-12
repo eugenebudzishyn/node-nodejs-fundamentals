@@ -6,4 +6,5 @@ import { parentPort } from 'worker_threads';
 
 parentPort.on('message', (data) => {
   // Write your code here
+  return data.sort();
 });
